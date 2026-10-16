@@ -1,0 +1,564 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BrightReach | Digital Marketing</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #172033;
+    background: #ffffff;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* Navbar */
+header {
+    padding: 20px 0;
+    border-bottom: 1px solid #eeeeee;
+    background: white;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #6c5ce7;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+}
+
+nav ul a:hover {
+    color: #6c5ce7;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #6c5ce7;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #5141cc;
+}
+
+/* Hero Section */
+.hero {
+    padding: 85px 0;
+    background: linear-gradient(120deg, #ffffff, #f2f0ff);
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.tag {
+    display: inline-block;
+    background: #eae6ff;
+    color: #6c5ce7;
+    padding: 8px 14px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin: 20px 0;
+}
+
+h1 span {
+    color: #6c5ce7;
+}
+
+.hero p {
+    color: #667085;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    background: #e9e5ff;
+    border-radius: 25px;
+    padding: 35px;
+    text-align: center;
+}
+
+.dashboard {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px #00000010;
+}
+
+.dashboard h3 {
+    margin-bottom: 20px;
+}
+
+.stats {
+    display: flex;
+    gap: 15px;
+}
+
+.stat {
+    flex: 1;
+    padding: 15px;
+    background: #f5f3ff;
+    border-radius: 10px;
+}
+
+.stat p {
+    font-size: 12px;
+    margin: 0;
+}
+
+.stat h2 {
+    color: #6c5ce7;
+    margin-top: 8px;
+}
+
+/* Services */
+section {
+    padding: 75px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-title h2 {
+    font-size: 34px;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    color: #667085;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    border: 1px solid #eeeeee;
+    padding: 25px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px #0000000d;
+    border-color: #c9c1ff;
+}
+
+.icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.card h3 {
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: #667085;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* About */
+.about {
+    background: #f8f7ff;
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+}
+
+.about-box {
+    background: white;
+    border-radius: 20px;
+    padding: 35px;
+    box-shadow: 0 10px 30px #00000008;
+}
+
+.about-box h3 {
+    color: #6c5ce7;
+    margin-bottom: 20px;
+}
+
+.progress {
+    background: #eeeeee;
+    height: 10px;
+    border-radius: 10px;
+    margin: 12px 0 22px;
+}
+
+.progress span {
+    display: block;
+    height: 100%;
+    background: #6c5ce7;
+    border-radius: 10px;
+}
+
+.about-text h2 {
+    font-size: 34px;
+    margin-bottom: 18px;
+}
+
+.about-text p {
+    color: #667085;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.about-text ul {
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.about-text li {
+    margin: 12px 0;
+}
+
+/* Contact */
+.contact-box {
+    background: #172033;
+    color: white;
+    padding: 45px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.contact-box p {
+    color: #c2c8d6;
+    margin-top: 12px;
+    line-height: 1.7;
+}
+
+.contact-box .btn {
+    background: white;
+    color: #172033;
+    white-space: nowrap;
+}
+
+/* Footer */
+footer {
+    padding: 25px 0;
+    text-align: center;
+    color: #667085;
+    border-top: 1px solid #eeeeee;
+    font-size: 13px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    nav {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .hero-content,
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 38px;
+    }
+
+    .services {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-box {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul a {
+        font-size: 12px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .section-title h2,
+    .about-text h2 {
+        font-size: 28px;
+    }
+
+    .contact-box {
+        padding: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header>
+    <div class="container">
+        <nav>
+            <div class="logo">BrightReach.</div>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <a href="#contact" class="btn">Let's Talk ↗</a>
+        </nav>
+    </div>
+</header>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="container hero-content">
+
+        <div>
+            <span class="tag">YOUR GROWTH, OUR MISSION</span>
+
+            <h1>
+                Make Your Brand
+                <span>Stand Out.</span>
+            </h1>
+
+            <p>
+                We help businesses grow online with creative digital
+                marketing strategies, social media management,
+                SEO and advertising.
+            </p>
+
+            <a href="#contact" class="btn">Start a Project ↗</a>
+        </div>
+
+        <div class="hero-image">
+            <div class="dashboard">
+                <h3>Marketing Overview</h3>
+
+                <div class="stats">
+                    <div class="stat">
+                        <p>Website Visitors</p>
+                        <h2>24.8K</h2>
+                    </div>
+
+                    <div class="stat">
+                        <p>New Leads</p>
+                        <h2>1,240</h2>
+                    </div>
+                </div>
+
+                <br>
+                <p>📈 Your business is growing!</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Services Section -->
+<section id="services">
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Our Digital Services</h2>
+            <p>Simple solutions to help your business grow online.</p>
+        </div>
+
+        <div class="services">
+
+            <div class="card">
+                <div class="icon">🔎</div>
+                <h3>SEO Optimization</h3>
+                <p>Improve your website ranking and help customers find your business on search engines.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📱</div>
+                <h3>Social Media</h3>
+                <p>Build your brand through creative posts and engaging social media content.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">🎯</div>
+                <h3>Paid Advertising</h3>
+                <p>Reach the right audience with effective digital advertising campaigns.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">✍️</div>
+                <h3>Content Marketing</h3>
+                <p>Create useful content that attracts people and builds customer trust.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">✉️</div>
+                <h3>Email Marketing</h3>
+                <p>Connect with your customers through simple and effective email campaigns.</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">📊</div>
+                <h3>Analytics</h3>
+                <p>Track website performance and understand which marketing strategies work best.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+    <div class="container about-content">
+
+        <div class="about-box">
+            <h3>Our Growth Strategy</h3>
+
+            <p>Social Media Marketing</p>
+            <div class="progress">
+                <span style="width: 85%"></span>
+            </div>
+
+            <p>SEO Optimization</p>
+            <div class="progress">
+                <span style="width: 70%"></span>
+            </div>
+
+            <p>Content Marketing</p>
+            <div class="progress">
+                <span style="width: 90%"></span>
+            </div>
+        </div>
+
+        <div class="about-text">
+            <span class="tag">ABOUT US</span>
+
+            <h2>Good Marketing Doesn't Need to Be Complicated.</h2>
+
+            <p>
+                We combine creative ideas with smart digital strategies
+                to help businesses reach more people, build trust and
+                achieve their goals.
+            </p>
+
+            <ul>
+                <li>✓ Strategies designed for your goals</li>
+                <li>✓ Creative and engaging content</li>
+                <li>✓ Clear performance reports</li>
+            </ul>
+
+            <a href="#contact" class="btn">Learn More ↗</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container">
+        <div class="contact-box">
+
+            <div>
+                <h2>Ready to Grow Your Business?</h2>
+
+                <p>
+                    Let's discuss your ideas and create a digital
+                    marketing strategy for your brand.
+                </p>
+            </div>
+
+            <a class="btn"
+               href="mailto:hello@example.com?subject=Digital%20Marketing%20Enquiry">
+                Contact Us ↗
+            </a>
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <p>© <span id="year"></span> BrightReach. All rights reserved.</p>
+        <p>Digital Marketing Solutions</p>
+    </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+</script>
+
+</body>
+</html>
